@@ -3,68 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Decision Quality Lab</title>
 
-<style>
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fb;
-    margin:0;
-    padding:40px;
-    color:#222;
-}
-.container{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:16px;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-}
-h1{
-    color:#1d4ed8;
-}
-button{
-    background:#1d4ed8;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    border-radius:10px;
-    font-size:16px;
-    cursor:pointer;
-}
-textarea{
-    width:100%;
-    height:180px;
-    margin-top:15px;
-    margin-bottom:20px;
-    padding:12px;
-    font-size:16px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
-
+<header>
 <h1>Decision Quality Lab</h1>
 
 <p>
 Improve important business decisions through structured reasoning,
-risk assessment and governance.
+risk assessment, governance, and human judgment.
 </p>
+</header>
 
-<h3>Describe your decision</h3>
+<main>
 
-<textarea placeholder="Example: Should our organization adopt AI for customer support?"></textarea>
+<h2>Review a Decision</h2>
 
-<button onclick="alert('AI Review will be available soon.')">
-Review Decision
-</button>
+<label>Decision Title</label><br>
+<input type="text" placeholder="Example: Should we adopt AI for customer support?">
 
-</div>
+<br><br>
+
+<label>Decision Context</label><br>
+<textarea placeholder="Describe your decision..."></textarea>
+
+<br><br>
+
+<button>Review Decision</button>
+
+</main>
+
+<script src="app.js"></script>
 
 </body>
 </html>
