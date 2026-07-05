@@ -16,6 +16,9 @@ This prototype demonstrates how structured decision review can improve decision 
 
 ## Current Features
 
+- Progressive scoring across seven decision-quality dimensions
+- Per-dimension score breakdown
+- Priority improvement recommendations
 - Structured decision review form
 - Decision quality score
 - Decision readiness assessment
@@ -29,6 +32,22 @@ This prototype demonstrates how structured decision review can improve decision 
 - Client-side processing with no data storage
 
 ## How the Score Works
+
+## Scoring Model
+
+Each review dimension receives a progressive score from 0 to 100 based on the completeness and relevance of the information provided.
+
+The final score is calculated using weighted dimensions:
+
+- Decision definition — 20%
+- Desired outcome — 15%
+- Evidence quality — 20%
+- Risk awareness — 15%
+- Alternative analysis — 15%
+- Stakeholder impact — 10%
+- Decision ownership — 5%
+
+The score measures structural completeness, not whether the decision itself is correct.
 
 The current version uses transparent rule-based scoring across seven dimensions:
 
@@ -51,13 +70,12 @@ The tool does not currently use artificial intelligence.
 
 ## Project Status
 
-**Prototype v0.3**
+**Prototype v0.4**
 
 The current version is functional and publicly available. It is designed as a portfolio and learning project that demonstrates product thinking, decision governance, UX design, and front-end development.
 
 ## Roadmap
 
-- Progressive scoring instead of binary thresholds
 - Assumption identification
 - Risk categorization
 - Decision review date
