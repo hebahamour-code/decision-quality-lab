@@ -32,7 +32,6 @@ This prototype demonstrates how structured decision review can improve decision 
 - Client-side processing with no data storage
 
 ## How the Score Works
-
 ## Scoring Model
 
 Each review dimension receives a progressive score from 0 to 100 based on the completeness and relevance of the information provided.
