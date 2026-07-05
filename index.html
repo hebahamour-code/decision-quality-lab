@@ -1,58 +1,124 @@
-<main>
-  <h2>Review a Decision</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <label for="decisionTitle">Decision Title</label>
-  <input
-    id="decisionTitle"
-    type="text"
-    placeholder="Example: Should we adopt AI for customer support?"
+  <meta
+    name="description"
+    content="A decision quality review prototype for structured reasoning, risk assessment, alternatives, stakeholders, and governance."
   >
 
-  <label for="decisionContext">Decision Context</label>
-  <textarea
-    id="decisionContext"
-    placeholder="Describe the situation, problem, and why a decision is needed."
-  ></textarea>
+  <title>Decision Quality Lab</title>
 
-  <label for="objective">Desired Outcome</label>
-  <textarea
-    id="objective"
-    placeholder="What should this decision achieve?"
-  ></textarea>
+  <link rel="stylesheet" href="./style.css?v=5">
+</head>
 
-  <label for="evidence">Available Evidence</label>
-  <textarea
-    id="evidence"
-    placeholder="What facts, data, or research support this decision?"
-  ></textarea>
+<body>
 
-  <label for="risks">Key Risks</label>
-  <textarea
-    id="risks"
-    placeholder="What could go wrong, and who could be affected?"
-  ></textarea>
+  <header>
+    <div class="header-content">
+      <p class="eyebrow">Open-source decision governance prototype</p>
 
-  <label for="alternatives">Alternatives Considered</label>
-  <textarea
-    id="alternatives"
-    placeholder="What other options have been considered?"
-  ></textarea>
+      <h1>Decision Quality Lab</h1>
 
-  <label for="stakeholders">Affected Stakeholders</label>
-  <input
-    id="stakeholders"
-    type="text"
-    placeholder="Employees, customers, regulators, partners..."
-  >
+      <p class="subtitle">
+        Review the quality of an important decision before committing to it.
+      </p>
 
-  <label for="owner">Decision Owner</label>
-  <input
-    id="owner"
-    type="text"
-    placeholder="Who is accountable for the decision?"
-  >
+      <p class="description">
+        Structure the decision, expose missing information, examine risks,
+        compare alternatives, and strengthen accountability.
+      </p>
+    </div>
+  </header>
 
-  <button id="reviewBtn">Review Decision</button>
+  <main>
 
-  <section id="result" class="result hidden"></section>
-</main>
+    <section class="form-card">
+
+      <div class="section-heading">
+        <p class="step">Decision Review</p>
+        <h2>Describe the decision</h2>
+
+        <p class="intro">
+          The quality of the review depends on the quality of the information
+          provided. Avoid confidential or personally identifiable information.
+        </p>
+      </div>
+
+      <label for="decisionTitle">Decision Title</label>
+      <input
+        id="decisionTitle"
+        type="text"
+        placeholder="Example: Should we adopt AI for customer support?"
+      >
+
+      <label for="decisionContext">Decision Context</label>
+      <textarea
+        id="decisionContext"
+        placeholder="Describe the situation, the problem, relevant constraints, and why a decision is needed."
+      ></textarea>
+
+      <label for="objective">Desired Outcome</label>
+      <textarea
+        id="objective"
+        placeholder="What should this decision achieve? How would success be measured?"
+      ></textarea>
+
+      <label for="evidence">Available Evidence</label>
+      <textarea
+        id="evidence"
+        placeholder="What facts, data, research, experience, or expert input support this decision?"
+      ></textarea>
+
+      <label for="risks">Key Risks</label>
+      <textarea
+        id="risks"
+        placeholder="What could go wrong? Who may be affected? What are the operational, financial, ethical, or regulatory risks?"
+      ></textarea>
+
+      <label for="alternatives">Alternatives Considered</label>
+      <textarea
+        id="alternatives"
+        placeholder="What other options were considered, including doing nothing, delaying, or running a limited pilot?"
+      ></textarea>
+
+      <label for="stakeholders">Affected Stakeholders</label>
+      <input
+        id="stakeholders"
+        type="text"
+        placeholder="Employees, customers, regulators, partners..."
+      >
+
+      <label for="owner">Decision Owner</label>
+      <input
+        id="owner"
+        type="text"
+        placeholder="Who is accountable for this decision?"
+      >
+
+      <button id="reviewBtn" type="button">
+        Review Decision
+      </button>
+
+      <section
+        id="result"
+        class="result hidden"
+        aria-live="polite"
+      ></section>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Decision Quality Lab · Rule-based prototype · No information is stored
+    </p>
+  </footer>
+
+  <script src="./app.js?v=5"></script>
+
+</body>
+</html>
