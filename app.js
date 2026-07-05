@@ -247,25 +247,44 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
 
-    const stakeholdersScore = progressiveTextScore(
-      values.stakeholders,
-      {
-        shortLength: 10,
-        strongLength: 100,
-        signals: [
-          "employee",
-          "customer",
-          "regulator",
-          "partner",
-          "supplier",
-          "manager",
-          "shareholder",
-          "community"
-        ],
-        minimumSignalCount: 3
-      }
-    );
+   const stakeholderSignals = [
+  "employee",
+  "employees",
+  "customer",
+  "customers",
+  "regulator",
+  "regulators",
+  "partner",
+  "partners",
+  "supplier",
+  "suppliers",
+  "manager",
+  "managers",
+  "shareholder",
+  "shareholders",
+  "union",
+  "unions",
+  "legal",
+  "finance",
+  "hr",
+  "community",
+  "leadership"
+];
 
+const detectedStakeholders = countSignals(
+  values.stakeholders,
+  stakeholderSignals
+);
+
+let stakeholdersScore = 0;
+
+if (values.stakeholders) {
+  stakeholdersScore = Math.min(
+    100,
+    detectedStakeholders * 18 +
+      (values.stakeholders.length >= 25 ? 10 : 0)
+  );
+}
     const ownerScore = values.owner
       ? values.owner.length >= 3
         ? 100
