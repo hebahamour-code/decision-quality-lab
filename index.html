@@ -1,47 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Decision Quality Lab</title>
-
-<link rel="stylesheet" href="./style.css?v=4">
-
-</head>
-
-<body>
-
-<header>
-<h1>Decision Quality Lab</h1>
-
-<p>
-Improve important business decisions through structured reasoning,
-risk assessment, governance, and human judgment.
-</p>
-</header>
-
 <main>
+  <h2>Review a Decision</h2>
 
-<h2>Review a Decision</h2>
+  <label for="decisionTitle">Decision Title</label>
+  <input
+    id="decisionTitle"
+    type="text"
+    placeholder="Example: Should we adopt AI for customer support?"
+  >
 
-<label>Decision Title</label><br>
-<input type="text" placeholder="Example: Should we adopt AI for customer support?">
+  <label for="decisionContext">Decision Context</label>
+  <textarea
+    id="decisionContext"
+    placeholder="Describe the situation, problem, and why a decision is needed."
+  ></textarea>
 
-<br><br>
+  <label for="objective">Desired Outcome</label>
+  <textarea
+    id="objective"
+    placeholder="What should this decision achieve?"
+  ></textarea>
 
-<label>Decision Context</label><br>
-<textarea placeholder="Describe your decision..."></textarea>
+  <label for="evidence">Available Evidence</label>
+  <textarea
+    id="evidence"
+    placeholder="What facts, data, or research support this decision?"
+  ></textarea>
 
-<br><br>
+  <label for="risks">Key Risks</label>
+  <textarea
+    id="risks"
+    placeholder="What could go wrong, and who could be affected?"
+  ></textarea>
 
-<button id="reviewBtn">Review Decision</button>
+  <label for="alternatives">Alternatives Considered</label>
+  <textarea
+    id="alternatives"
+    placeholder="What other options have been considered?"
+  ></textarea>
 
-<section id="result" class="result hidden"></section>
+  <label for="stakeholders">Affected Stakeholders</label>
+  <input
+    id="stakeholders"
+    type="text"
+    placeholder="Employees, customers, regulators, partners..."
+  >
 
+  <label for="owner">Decision Owner</label>
+  <input
+    id="owner"
+    type="text"
+    placeholder="Who is accountable for the decision?"
+  >
+
+  <button id="reviewBtn">Review Decision</button>
+
+  <section id="result" class="result hidden"></section>
 </main>
-
-<script src="./app.js?v=4"></script>
-
-</body>
-</html>
