@@ -376,9 +376,10 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
-    const priorityGaps = [...dimensions]
-      .sort((a, b) => a.score - b.score)
-      .slice(0, 3);
+  const priorityGaps = [...dimensions]
+  .filter((dimension) => dimension.score < 80)
+  .sort((a, b) => a.score - b.score)
+  .slice(0, 3);
 
     const priorityMarkup = priorityGaps
       .map(
