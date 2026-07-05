@@ -376,26 +376,35 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
-  const priorityGaps = [...dimensions]
-  .filter((dimension) => dimension.score < 80)
-  .sort((a, b) => a.score - b.score)
-  .slice(0, 3);
+ const priorityMarkup =
+  priorityGaps.length > 0
+    ? priorityGaps
+        .map(
+          (dimension, index) => `
+            <li class="priority-item">
+              <span>${index + 1}</span>
 
-    const priorityMarkup = priorityGaps
-      .map(
-        (dimension, index) => `
-          <li class="priority-item">
-            <span>${index + 1}</span>
+              <div>
+                <strong>${dimension.label}</strong>
+                <p>${dimension.guidance}</p>
+              </div>
+            </li>
+          `
+        )
+        .join("")
+    : `
+        <li class="priority-item priority-complete">
+          <span>✓</span>
 
-            <div>
-              <strong>${dimension.label}</strong>
-              <p>${dimension.guidance}</p>
-            </div>
-          </li>
-        `
-      )
-      .join("");
-
+          <div>
+            <strong>No immediate structural gaps detected</strong>
+            <p>
+              All dimensions reached the current structural threshold.
+              Validate the evidence and assumptions before commitment.
+            </p>
+          </div>
+        </li>
+      `;
     result.classList.remove("hidden");
 
     result.innerHTML = `
